@@ -7,7 +7,7 @@ public class CondicionalesDoWhile {
 
         do{
 
-            genero = JOptionPane.showInputDialog("Introduce tu genero");
+            genero = JOptionPane.showInputDialog("Introduce tu genero (H/M");
 
 
         }while(genero.equalsIgnoreCase("h")== false && genero.equalsIgnoreCase("m") == false);
