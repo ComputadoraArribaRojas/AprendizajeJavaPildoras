@@ -1,4 +1,4 @@
-package Practicas;
+package practicas;
 
 import javax.swing.*;
 

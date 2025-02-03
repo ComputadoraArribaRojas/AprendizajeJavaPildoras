@@ -1,4 +1,4 @@
-package Practicas;
+package practicas;
 
 import javax.swing.*;
 
@@ -15,8 +15,11 @@ public class SumaDeDigitosDeNum {
             resultado = resultado + (numero % 10);
             // Eliminar el último dígito
             numero = numero / 10;
+
         }
 
         System.out.println("La suma de todos los dígitos es: " + resultado);
+
+
     }
 }
