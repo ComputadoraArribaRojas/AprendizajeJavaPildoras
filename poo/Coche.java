@@ -2,7 +2,7 @@ package poo;
 
 public class Coche {
 
-   private byte ruedas;
+   private final byte ruedas;
    private int largo, ancho, motor, pesoPlataforma, pesoTotal;
    private String color;
    private boolean aireAcondicionado, asientosCuero;
