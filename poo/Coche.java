@@ -19,7 +19,7 @@ public class Coche {
 
     public String getDatos(){
 
-        return "La plataforma del vehiculo tiene: " + ruedas + ". Mide " + largo + " centimetros con un ancho"+
+        return "El vehiculo es de: " + ruedas + " ruedas. Mide " + largo + " centimetros con un ancho"+
                 " de " + ancho + " cm y un peso de plataforma de " + pesoPlataforma + " kg.";
 
     }

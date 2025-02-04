@@ -2,7 +2,7 @@ package poo;
 
 import javax.swing.*;
 
-public class UsoCoche {
+public class UsoVehiculo {
     public static void main(String[] args) {
 
         Coche miCoche = new Coche();//Instanciar una clase, Ejemplarizar una clase
@@ -21,6 +21,15 @@ public class UsoCoche {
         System.out.println(miCoche.getPesoCoche());
 
         System.out.println("El precio final del coche es: " + miCoche.getPrecioCoche());
+
+        Furgoneta miFurgoneta = new Furgoneta(570, 7);
+
+
+        miFurgoneta.setColor("Rosaditaaaa");
+        miFurgoneta.setAsientosCuero(true);
+        miFurgoneta.setAireAcondicionado(true);
+
+        System.out.println(miFurgoneta.getDatos() + " " + miFurgoneta.dimeDatosFurgoneta());
 
     }
 
