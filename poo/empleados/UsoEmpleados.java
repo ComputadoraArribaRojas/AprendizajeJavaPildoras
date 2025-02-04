@@ -17,9 +17,9 @@ public class UsoEmpleados {
 
 class Empleados{
 
-    private String nombre;
+    private final String nombre;
     private double sueldo;
-    private Date altaContrato;
+    private final Date altaContrato;
 
     public Empleados(String nombre, double sueldo, int ano, int mes, int dia){
 
