@@ -7,12 +7,15 @@ public class UsoEmpleados {
 
     public static void main(String[] args) {
 
-        Jefatura jefeRRHH = new Jefatura("Ana", 21000, 2005, 01,12);
+        Jefatura jefeRRHH = new Jefatura("Ana", 21000, 2005, 11,12);
 
         jefeRRHH.setIncentivo(1200);
+        System.out.println(jefeRRHH.getNombre() + " tiene un bonus de sueldo de: " + jefeRRHH.estableceBonus(500));
         System.out.println(jefeRRHH.getSueldo());
 
         Empleados jefeRecursos = jefeRRHH;//Polimorfismo
+
+
         Empleados miEmpleado = new Empleados("Uriel", 15000, 2005, 9, 15);
         Empleados miEmpleado2 = new Empleados("Mishi");
 
@@ -22,11 +25,15 @@ public class UsoEmpleados {
         System.out.println("Nombre: " + miEmpleado2.getNombre() + ", sueldo: " + miEmpleado2.getSueldo() +
                 ", fecha de alta: " + miEmpleado2.getAltaContrato());
 
+        System.out.println("Nombre: " + jefeRecursos.getNombre() + ", sueldo: " + jefeRecursos.getSueldo() +
+                ", fecha de alta: " + jefeRecursos.getAltaContrato() + jefeRRHH.tomarDeciciones(" Eh decidido: zi") );
+
+
     }
 
 }
 
-class Empleados{
+class Empleados implements Trabajadores{
 
     private final String nombre;
     private double sueldo;
@@ -73,9 +80,14 @@ class Empleados{
         sueldo+=aumento;
 
     }
+
+    @Override
+    public double estableceBonus(double bonus) {
+        return Trabajadores.bonusMinimo + bonus;
+    }
 }
 
-class Jefatura extends Empleados{
+class Jefatura extends Empleados implements Jefes{
 
     private double incentivo;
 
@@ -99,4 +111,14 @@ class Jefatura extends Empleados{
 
     }
 
+    @Override
+    public String tomarDeciciones(String Decision) {
+        return Decision;
+    }
+
+    @Override
+    public double estableceBonus(double bonus) {
+        double prima = 2000;
+        return Trabajadores.bonusMinimo + bonus + prima;
+    }
 }
